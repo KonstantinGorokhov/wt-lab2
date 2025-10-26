@@ -1,0 +1,56 @@
+#myToast {
+  min-width: 300px;      
+  font-size: 1.1rem;     
+  padding: 1rem 1.25rem; 
+}
+
+
+.card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  img {
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+.modal-content {
+  border: none;
+  border-radius: 1rem;
+}
+
+.modal-body {
+  line-height: 1.6;
+}
+
+
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1720px;
+  }
+
+  .card {
+    max-width: 420px;
+  }
+
+  .row-cols-xxxl-4 > * {
+    flex: 0 0 auto;
+    width: 25%; // 4 карточки в ряд
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+

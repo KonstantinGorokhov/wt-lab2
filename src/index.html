@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bootstrap Header</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container ">
+      <header class="border-bottom border-2 border-dark">
+        <nav class="navbar bg-transparent">
+          <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+              <img src="" alt="Логотип" width="140" height="140" class="d-inline-block align-text-top">
+              <span class="fw-bold fs-4">Президенты франции</span>
+            </a>
+            <button id="loadBtn" class="btn btn-dark px-4 py- fs-4 w-auto w-sm-auto w-md-auto w-lg-auto w-100">Загрузить</button>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <div class="container my-5">
+      <main>
+        <div class="row g-4 justify-content-center">
+
+          <!-- Макрон -->
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card shadow-sm border-0 rounded-4 h-100 position-relative overflow-hidden president-card"
+                 data-president="macron"
+                 data-bs-toggle="modal"
+                 data-bs-target="#infoModal">
+              <div class="position-absolute top-0 start-0 m-2 px-2 py-1 bg-white rounded text-dark fw-semibold small shadow-sm">
+                2017 – н.в.
+              </div>
+              <img src="./images/macron.jpg" class="card-img-top" alt="Emmanuel Macron">
+              <div class="card-body bg-light-subtle">
+                <small class="text-muted">Emmanuel Macron</small>
+                <h5 class="card-title fw-bold mb-2">Эммануэль Макрон</h5>
+                <p class="card-text text-muted">Реформы рынка труда, снижение налогов для бизнеса, инициативы по европейской интеграции.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Олланд -->
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card shadow-sm border-0 rounded-4 h-100 position-relative overflow-hidden president-card"
+                 data-president="hollande"
+                 data-bs-toggle="modal"
+                 data-bs-target="#infoModal">
+              <div class="position-absolute top-0 start-0 m-2 px-2 py-1 bg-white rounded text-dark fw-semibold small shadow-sm">
+                2012 – 2017
+              </div>
+              <img src="./images/hollande.jpg" class="card-img-top" alt="François Hollande">
+              <div class="card-body bg-light-subtle">
+                <small class="text-muted">François Hollande</small>
+                <h5  class="card-title fw-bold mb-2">Франсуа Олланд</h5>
+                <p class="card-text text-muted">Борьба с безработицей, налоговые реформы и международные операции Франции.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Саркози -->
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card shadow-sm border-0 rounded-4 h-100 position-relative overflow-hidden president-card"
+                 data-president="sarkozy"
+                 data-bs-toggle="modal"
+                 data-bs-target="#infoModal">
+              <div class="position-absolute top-0 start-0 m-2 px-2 py-1 bg-white rounded text-dark fw-semibold small shadow-sm">
+                2007 – 2012
+              </div>
+              <img src="./images/sarkozy.jpg" class="card-img-top" alt="Nicolas Sarkozy">
+              <div class="card-body bg-light-subtle">
+                <small class="text-muted">Nicolas Sarkozy</small>
+                <h5 class="card-title fw-bold mb-2">Николя Саркози</h5>
+                <p class="card-text text-muted">Экономические реформы, пенсионная система, активная внешняя политика.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ширак -->
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card shadow-sm border-0 rounded-4 h-100 position-relative overflow-hidden president-card"
+                 data-president="chirac"
+                 data-bs-toggle="modal"
+                 data-bs-target="#infoModal">
+              <div class="position-absolute top-0 start-0 m-2 px-2 py-1 bg-white rounded text-dark fw-semibold small shadow-sm">
+                1995 – 2007
+              </div>
+              <img src="./images/chirac.jpg" class="card-img-top" alt="Jacques Chirac">
+              <div class="card-body bg-light-subtle">
+                <small class="text-muted">Jacques Chirac</small>
+                <h5 class="card-title fw-bold mb-2">Жак Ширак</h5>
+                <p class="card-text text-muted">Поддержка сельского хозяйства, отказ от участия в войне в Ираке.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Миттеран -->
+          <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card shadow-sm border-0 rounded-4 h-100 position-relative overflow-hidden president-card"
+                 data-president="mitterrand"
+                 data-bs-toggle="modal"
+                 data-bs-target="#infoModal">
+              <div class="position-absolute top-0 start-0 m-2 px-2 py-1 bg-white rounded text-dark fw-semibold small shadow-sm">
+                1981 – 1995
+              </div>
+              <img src="./images/mitterrand.jpg" class="card-img-top" alt="François Mitterrand">
+              <div class="card-body bg-light-subtle">
+                <small class="text-muted">François Mitterrand</small>
+                <h5 class="card-title fw-bold mb-2">Франсуа Миттеран</h5>
+                <p class="card-text text-muted">Национализация предприятий, развитие социальной политики.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Модальное окно -->
+        <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content rounded-4 shadow">
+
+              <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="infoModalLabel">Подробнее о президенте</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+              </div>
+
+              <div class="modal-body">
+                <p id="modalDescription" class="fs-5 lh-base"></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="container border-top border-2 border-dark">
+      <footer class="bg-transparent py-3 mt-5">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center">
+
+          <p class="mb-2 mb-sm-0 text-center text-sm-start fw-medium">
+            Выполнил: <span class="fw-bold">Горохов Константин Алексеевич</span>
+          </p>
+
+          <div class="d-flex gap-3 justify-content-center justify-content-sm-end">
+            <a href="https://t.me/soycomounangelenelcielo" target="_blank" class="text-dark fs-4">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://github.com/KonstantinGorokhov" target="_blank" class="text-dark fs-4">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+      </footer>
+    </div>
+
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="myToast"
+        class="toast align-items-center text-bg-warning border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex align-items-center">
+          <div class="toast-body d-flex align-items-center gap-3">
+            <i class="fa-solid fa-spinner fa-spin fa-lg"></i>
+            <span>🚧 Функционал временно недоступен</span>
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Закрыть"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
