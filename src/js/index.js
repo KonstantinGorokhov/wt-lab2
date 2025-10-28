@@ -144,12 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
       showPresidentInfo(presidentOrder[currentPresidentIndex]);
     }
   });
-
-  // --- Исправление бага с блокировкой прокрутки ---
-  modalElement.addEventListener('hidden.bs.modal', () => {
-    document.body.classList.remove('modal-open');
-    document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
-  });
 });
 
 
