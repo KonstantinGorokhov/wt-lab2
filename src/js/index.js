@@ -1,27 +1,23 @@
 import '../styles/style.scss';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import 'bootstrap';
-
-import '../styles/style.scss';
+import { Toast } from 'bootstrap'
+import { Modal, Popover } from 'bootstrap';
 
 import logo from '../images/logo.png';
-document.querySelector('.navbar-brand img').src = logo;
-
 import macronImg from '../images/macron.jpg';
 import hollandeImg from '../images/hollande.jpg';
 import sarkozyImg from '../images/sarkozy.jpg';
 import chiracImg from '../images/chirac.jpg';
 import mitterrandImg from '../images/mitterrand.jpg';
+
+document.querySelector('.navbar-brand img').src = logo;
 document.querySelector('img[alt="Emmanuel Macron"]').src = macronImg;
 document.querySelector('img[alt="François Hollande"]').src = hollandeImg;
 document.querySelector('img[alt="Nicolas Sarkozy"]').src = sarkozyImg;
 document.querySelector('img[alt="Jacques Chirac"]').src = chiracImg;
 document.querySelector('img[alt="François Mitterrand"]').src = mitterrandImg;
 
-
-import { Toast } from 'bootstrap'
 
 document.addEventListener('DOMContentLoaded', () => {
   const loadBtn = document.querySelector('#loadBtn');
@@ -35,16 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.show();
   });
 });
-
-import { Modal, Popover } from 'bootstrap';
-
 document.addEventListener('DOMContentLoaded', () => {
   const cards = Array.from(document.querySelectorAll('.president-card'));
   const modalElement = document.getElementById('infoModal');
   const modal = new Modal(modalElement);
   const modalDescription = document.getElementById('modalDescription');
 
-  // --- Тексты с popover для каждого президента ---
+
   const descriptions = {
     macron: `Эммануэль Макрон проводит политику
       <span class="text-primary fw-semibold" data-bs-toggle="popover" title="Экономические реформы"
@@ -112,11 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
       </span>.`
   };
 
-  // --- Упорядоченные ID президентов ---
   const presidentOrder = ['macron', 'hollande', 'sarkozy', 'chirac', 'mitterrand'];
   let currentPresidentIndex = 0;
 
-  // --- При клике по карточке ---
   cards.forEach((card, index) => {
     card.addEventListener('click', () => {
       const key = card.dataset.president;
@@ -125,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Функция показа президента ---
+
   function showPresidentInfo(key) {
     modalDescription.innerHTML = descriptions[key] || 'Информация отсутствует.';
     modal.show();
@@ -137,9 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 200);
   }
 
-  // --- Переключение стрелками влево / вправо ---
+
   document.addEventListener('keydown', (e) => {
-    // Проверяем, открыта ли модалка
     if (!document.body.classList.contains('modal-open')) return;
 
     if (e.key === 'ArrowRight') {
